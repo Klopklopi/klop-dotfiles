@@ -18,9 +18,9 @@ create_symlinks() {
 	fi
 
 	 # Vérifier si le fichier ~/.p10k.zsh n'existe pas
-	if [ ! -f ~/zsh/.p10k.zsh ]; then
+	if [ ! -f ~/.p10k.zsh ]; then
 	    # Créer un lien symbolique vers le fichier .p10k.zsh dans le répertoire script_dir
-	    ln -s "$script_dir/.p10k.zsh" ~/.p10k.zsh
+	    ln -s "$script_dir/zsh/.p10k.zsh" ~/.p10k.zsh
 	fi
 }
 
