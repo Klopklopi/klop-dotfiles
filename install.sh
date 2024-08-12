@@ -26,3 +26,5 @@ git clone https://github.com/Klopklopi/klop-dotfiles ~/klop-dotfiles
 
 # Copier le fichier .zshrc de votre repository vers votre répertoire personnel
 cp ~/klop-dotfiles/zsh/.zshrc ~/.zshrc
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM}"/themes/powerlevel10k
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
