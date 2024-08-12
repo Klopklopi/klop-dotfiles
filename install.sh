@@ -23,13 +23,14 @@ create_symlinks
 
 # Cloner votre repository GitHub (remplacez URL_DE_VOTRE_REPO par l'URL réelle)
 git clone https://github.com/Klopklopi/klop-dotfiles ~/klop-dotfiles
+
+
+# Copier le fichier .zshrc de votre repository vers votre répertoire personnel
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+cp ~/klop-dotfiles/zsh/.zshrc ~/.zshrc
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM}"/themes/powerlevel10k
-
-# Copier le fichier .zshrc de votre repository vers votre répertoire personnel
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-cp ~/klop-dotfiles/zsh/.zshrc ~/.zshrc
 source ~/.zshrc
