@@ -21,4 +21,8 @@ create_symlinks() {
 
 create_symlinks
 
-curl -sL https://raw.githubusercontent.com/aiktb/dotzsh/master/zsh.sh | bash && zsh
+# Cloner votre repository GitHub (remplacez URL_DE_VOTRE_REPO par l'URL réelle)
+git clone https://github.com/Klopklopi/klop-dotfiles ~/klop-dotfiles
+
+# Copier le fichier .zshrc de votre repository vers votre répertoire personnel
+cp ~/klop-dotfiles/zsh/.zshrc ~/.zshrc
