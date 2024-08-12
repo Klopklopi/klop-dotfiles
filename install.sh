@@ -21,3 +21,4 @@ create_symlinks() {
 
 create_symlinks
 
+curl -sL https://raw.githubusercontent.com/aiktb/dotzsh/master/zsh.sh | bash && zsh
