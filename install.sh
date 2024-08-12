@@ -19,7 +19,7 @@ create_symlinks() {
 
 }
 
-create_symlinks
+create_symlinks()
 
 #!/bin/bash
 
