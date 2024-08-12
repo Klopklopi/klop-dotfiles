@@ -45,6 +45,14 @@ sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/g' ~/.zshrc
 # Move ".zcompdump-*" file to "$ZSH/cache" directory.
 sed -i -e '/source \$ZSH\/oh-my-zsh.sh/i export ZSH_COMPDUMP=\$ZSH\/cache\/.zcompdump-\$HOST' ~/.zshrc
 # Configure the default ZSH configuration for new users.
+cat << 'EOF' >> ~/.zshrc
+
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+EOF
 sudo cp ~/.zshrc /etc/skel/
 sudo cp ~/.p10k.zsh /etc/skel/
 sudo cp -r ~/.oh-my-zsh /etc/skel/
